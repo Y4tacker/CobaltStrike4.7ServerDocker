@@ -1,0 +1,13 @@
+version: "2"
+services:
+  csserver:
+    build: .
+    image: testcsserver47
+    platform: linux/amd64
+    ports:
+      - "50050:50050"
+      - "50050:50050/udp"
+      - "443:443"
+      - "443:443/udp"
+      - "80:80"
+    restart: always
